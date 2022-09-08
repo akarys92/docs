@@ -49,7 +49,7 @@ module.exports = {
           className: 'V3_active',
         },
         {
-          to: '/sdk/widgets/swap-widget',
+          to: '/widgets/introduction',
           label: 'Widgets',
           position: 'left',
           className: 'V3_active',
@@ -73,7 +73,7 @@ module.exports = {
           className: 'V2_active',
         },
         {
-          to: '/sdk/2.0.0/',
+          to: '/sdk/V2/',
           label: 'SDK',
           position: 'left',
           className: 'V2_active',
@@ -97,7 +97,7 @@ module.exports = {
           className: 'V1_active',
         },
         {
-          to: '/sdk/1.0.0/',
+          to: '/sdk/V1/',
           label: 'SDK',
           position: 'left',
           className: 'V1_active',
@@ -296,13 +296,35 @@ module.exports = {
         remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }]],
         includeCurrentVersion: false,
         versions: {
-          '3.0.0': {
+          'V3': {
             banner: 'none',
           },
-          '2.0.0': {
+          'V2': {
             banner: 'none',
           },
-          '1.0.0': {
+          'V1': {
+            banner: 'none',
+          },
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'Widgets',
+        path: 'Widgets',
+        routeBasePath: 'widgets/',
+        sidebarPath: require.resolve('./widgetsSidebar.js'),
+        remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }]],
+        includeCurrentVersion: false,
+        versions: {
+          'V3': {
+            banner: 'none',
+          },
+          'V2': {
+            banner: 'none',
+          },
+          'V1': {
             banner: 'none',
           },
         },
